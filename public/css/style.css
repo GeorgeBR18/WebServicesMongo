@@ -1,0 +1,29 @@
+:root{
+    --title_color: orange;        
+}
+
+body{
+    background-image: url("/image/jamones.jpg");
+    background-size: 10%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    width: 100%;
+}
+
+.title {    
+    color: var(--title_color);
+}
+
+.cardList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.card{
+    background-color: darkgray;
+
+}
+

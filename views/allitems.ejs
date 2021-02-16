@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">
+    <title>All Items from DB</title>
+</head>
+<body>    
+    <h1 class="title">All items from DB</h1>
+    
+    <div class="cardList">        
+    
+    <% if(typeof error !== 'undefined'){ %>
+        <p><%- error %></p>
+    <%} %>
+
+    <% if(typeof results !== 'undefined'){ %>
+        <% results.forEach(function(item){ %>
+            <div class="card">
+                <p>Client Name: <%- item.userName %></p>
+                <p>Date: <%- item.date %></p>
+                <p>Promotion: <%- item.promotion %></p>
+                <p>Phone: <%- item.phone %></p>
+                <p>Time: <%- item.time %></p>
+            </div>
+            
+        <%}); %>
+    <%} %>
+    </div>
+</body>
+</html>

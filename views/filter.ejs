@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Clients</title>
+</head>
+<body>
+    <h1>Filter Clients</h1>
+
+    <% if(typeof promotion !== 'undefined'){ %>
+        <h2>Clientes con la promocion: <%- promotion %></h2>
+    <% }else{ %>
+        <h2>ERROR</h2>
+    <% } %>
+
+    <% if(typeof error !== 'undefined'){ %>
+        <p><%- error %></p>
+    <% } %>
+
+    <% if(typeof results !== 'undefined'){ %>
+        <% results.forEach(function(item){ %>
+            <div>
+                <p>Client Name: <%- item.userName %></p>
+                <p>Date: <%- item.date %></p>
+                <p>Promotion: <%- item.promotion%></p>
+                <p>Phone: <%- item.phone%></p>
+                <p>Time: <%- item.time%></p>
+            </div>
+            <hr/>
+        <% }); %>
+    <% } %>
+</body>
+</html>
